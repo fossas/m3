@@ -73,10 +73,10 @@ func (m *MockClient) EXPECT() *MockClientMockRecorder {
 }
 
 // Options mocks base method
-func (m *MockClient) Options() MultiClusterOptions {
+func (m *MockClient) Options() ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Options")
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
@@ -498,10 +498,10 @@ func (m *MockAdminClient) EXPECT() *MockAdminClientMockRecorder {
 }
 
 // Options mocks base method
-func (m *MockAdminClient) Options() MultiClusterOptions {
+func (m *MockAdminClient) Options() ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Options")
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
@@ -3715,45 +3715,45 @@ func (mr *MockAdminOptionsMockRecorder) StreamBlocksRetrier() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StreamBlocksRetrier", reflect.TypeOf((*MockAdminOptions)(nil).StreamBlocksRetrier))
 }
 
-// MockCommonMultiClusterOptions is a mock of CommonMultiClusterOptions interface
-type MockCommonMultiClusterOptions struct {
+// MockCommonReplicatedOptions is a mock of CommonReplicatedOptions interface
+type MockCommonReplicatedOptions struct {
 	ctrl     *gomock.Controller
-	recorder *MockCommonMultiClusterOptionsMockRecorder
+	recorder *MockCommonReplicatedOptionsMockRecorder
 }
 
-// MockCommonMultiClusterOptionsMockRecorder is the mock recorder for MockCommonMultiClusterOptions
-type MockCommonMultiClusterOptionsMockRecorder struct {
-	mock *MockCommonMultiClusterOptions
+// MockCommonReplicatedOptionsMockRecorder is the mock recorder for MockCommonReplicatedOptions
+type MockCommonReplicatedOptionsMockRecorder struct {
+	mock *MockCommonReplicatedOptions
 }
 
-// NewMockCommonMultiClusterOptions creates a new mock instance
-func NewMockCommonMultiClusterOptions(ctrl *gomock.Controller) *MockCommonMultiClusterOptions {
-	mock := &MockCommonMultiClusterOptions{ctrl: ctrl}
-	mock.recorder = &MockCommonMultiClusterOptionsMockRecorder{mock}
+// NewMockCommonReplicatedOptions creates a new mock instance
+func NewMockCommonReplicatedOptions(ctrl *gomock.Controller) *MockCommonReplicatedOptions {
+	mock := &MockCommonReplicatedOptions{ctrl: ctrl}
+	mock.recorder = &MockCommonReplicatedOptionsMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use
-func (m *MockCommonMultiClusterOptions) EXPECT() *MockCommonMultiClusterOptionsMockRecorder {
+func (m *MockCommonReplicatedOptions) EXPECT() *MockCommonReplicatedOptionsMockRecorder {
 	return m.recorder
 }
 
 // SetAsyncTopologyInitializers mocks base method
-func (m *MockCommonMultiClusterOptions) SetAsyncTopologyInitializers(value []topology.Initializer) MultiClusterOptions {
+func (m *MockCommonReplicatedOptions) SetAsyncTopologyInitializers(value []topology.Initializer) ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetAsyncTopologyInitializers", value)
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
 // SetAsyncTopologyInitializers indicates an expected call of SetAsyncTopologyInitializers
-func (mr *MockCommonMultiClusterOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
+func (mr *MockCommonReplicatedOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockCommonMultiClusterOptions)(nil).SetAsyncTopologyInitializers), value)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockCommonReplicatedOptions)(nil).SetAsyncTopologyInitializers), value)
 }
 
 // AsyncTopologyInitializers mocks base method
-func (m *MockCommonMultiClusterOptions) AsyncTopologyInitializers() []topology.Initializer {
+func (m *MockCommonReplicatedOptions) AsyncTopologyInitializers() []topology.Initializer {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AsyncTopologyInitializers")
 	ret0, _ := ret[0].([]topology.Initializer)
@@ -3761,13 +3761,13 @@ func (m *MockCommonMultiClusterOptions) AsyncTopologyInitializers() []topology.I
 }
 
 // AsyncTopologyInitializers indicates an expected call of AsyncTopologyInitializers
-func (mr *MockCommonMultiClusterOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
+func (mr *MockCommonReplicatedOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockCommonMultiClusterOptions)(nil).AsyncTopologyInitializers))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockCommonReplicatedOptions)(nil).AsyncTopologyInitializers))
 }
 
 // OptionsForAsyncClusters mocks base method
-func (m *MockCommonMultiClusterOptions) OptionsForAsyncClusters() []Options {
+func (m *MockCommonReplicatedOptions) OptionsForAsyncClusters() []Options {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OptionsForAsyncClusters")
 	ret0, _ := ret[0].([]Options)
@@ -3775,50 +3775,50 @@ func (m *MockCommonMultiClusterOptions) OptionsForAsyncClusters() []Options {
 }
 
 // OptionsForAsyncClusters indicates an expected call of OptionsForAsyncClusters
-func (mr *MockCommonMultiClusterOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
+func (mr *MockCommonReplicatedOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockCommonMultiClusterOptions)(nil).OptionsForAsyncClusters))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockCommonReplicatedOptions)(nil).OptionsForAsyncClusters))
 }
 
-// MockMultiClusterOptions is a mock of MultiClusterOptions interface
-type MockMultiClusterOptions struct {
+// MockReplicatedOptions is a mock of ReplicatedOptions interface
+type MockReplicatedOptions struct {
 	ctrl     *gomock.Controller
-	recorder *MockMultiClusterOptionsMockRecorder
+	recorder *MockReplicatedOptionsMockRecorder
 }
 
-// MockMultiClusterOptionsMockRecorder is the mock recorder for MockMultiClusterOptions
-type MockMultiClusterOptionsMockRecorder struct {
-	mock *MockMultiClusterOptions
+// MockReplicatedOptionsMockRecorder is the mock recorder for MockReplicatedOptions
+type MockReplicatedOptionsMockRecorder struct {
+	mock *MockReplicatedOptions
 }
 
-// NewMockMultiClusterOptions creates a new mock instance
-func NewMockMultiClusterOptions(ctrl *gomock.Controller) *MockMultiClusterOptions {
-	mock := &MockMultiClusterOptions{ctrl: ctrl}
-	mock.recorder = &MockMultiClusterOptionsMockRecorder{mock}
+// NewMockReplicatedOptions creates a new mock instance
+func NewMockReplicatedOptions(ctrl *gomock.Controller) *MockReplicatedOptions {
+	mock := &MockReplicatedOptions{ctrl: ctrl}
+	mock.recorder = &MockReplicatedOptionsMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use
-func (m *MockMultiClusterOptions) EXPECT() *MockMultiClusterOptionsMockRecorder {
+func (m *MockReplicatedOptions) EXPECT() *MockReplicatedOptionsMockRecorder {
 	return m.recorder
 }
 
 // SetAsyncTopologyInitializers mocks base method
-func (m *MockMultiClusterOptions) SetAsyncTopologyInitializers(value []topology.Initializer) MultiClusterOptions {
+func (m *MockReplicatedOptions) SetAsyncTopologyInitializers(value []topology.Initializer) ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetAsyncTopologyInitializers", value)
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
 // SetAsyncTopologyInitializers indicates an expected call of SetAsyncTopologyInitializers
-func (mr *MockMultiClusterOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
+func (mr *MockReplicatedOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockMultiClusterOptions)(nil).SetAsyncTopologyInitializers), value)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockReplicatedOptions)(nil).SetAsyncTopologyInitializers), value)
 }
 
 // AsyncTopologyInitializers mocks base method
-func (m *MockMultiClusterOptions) AsyncTopologyInitializers() []topology.Initializer {
+func (m *MockReplicatedOptions) AsyncTopologyInitializers() []topology.Initializer {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AsyncTopologyInitializers")
 	ret0, _ := ret[0].([]topology.Initializer)
@@ -3826,13 +3826,13 @@ func (m *MockMultiClusterOptions) AsyncTopologyInitializers() []topology.Initial
 }
 
 // AsyncTopologyInitializers indicates an expected call of AsyncTopologyInitializers
-func (mr *MockMultiClusterOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
+func (mr *MockReplicatedOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockMultiClusterOptions)(nil).AsyncTopologyInitializers))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockReplicatedOptions)(nil).AsyncTopologyInitializers))
 }
 
 // OptionsForAsyncClusters mocks base method
-func (m *MockMultiClusterOptions) OptionsForAsyncClusters() []Options {
+func (m *MockReplicatedOptions) OptionsForAsyncClusters() []Options {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OptionsForAsyncClusters")
 	ret0, _ := ret[0].([]Options)
@@ -3840,27 +3840,27 @@ func (m *MockMultiClusterOptions) OptionsForAsyncClusters() []Options {
 }
 
 // OptionsForAsyncClusters indicates an expected call of OptionsForAsyncClusters
-func (mr *MockMultiClusterOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
+func (mr *MockReplicatedOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockMultiClusterOptions)(nil).OptionsForAsyncClusters))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockReplicatedOptions)(nil).OptionsForAsyncClusters))
 }
 
 // SetOptions mocks base method
-func (m *MockMultiClusterOptions) SetOptions(arg0 Options) MultiClusterOptions {
+func (m *MockReplicatedOptions) SetOptions(arg0 Options) ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetOptions", arg0)
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
 // SetOptions indicates an expected call of SetOptions
-func (mr *MockMultiClusterOptionsMockRecorder) SetOptions(arg0 interface{}) *gomock.Call {
+func (mr *MockReplicatedOptionsMockRecorder) SetOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetOptions", reflect.TypeOf((*MockMultiClusterOptions)(nil).SetOptions), arg0)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetOptions", reflect.TypeOf((*MockReplicatedOptions)(nil).SetOptions), arg0)
 }
 
 // Options mocks base method
-func (m *MockMultiClusterOptions) Options() Options {
+func (m *MockReplicatedOptions) Options() Options {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Options")
 	ret0, _ := ret[0].(Options)
@@ -3868,50 +3868,50 @@ func (m *MockMultiClusterOptions) Options() Options {
 }
 
 // Options indicates an expected call of Options
-func (mr *MockMultiClusterOptionsMockRecorder) Options() *gomock.Call {
+func (mr *MockReplicatedOptionsMockRecorder) Options() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Options", reflect.TypeOf((*MockMultiClusterOptions)(nil).Options))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Options", reflect.TypeOf((*MockReplicatedOptions)(nil).Options))
 }
 
-// MockAdminMultiClusterOptions is a mock of AdminMultiClusterOptions interface
-type MockAdminMultiClusterOptions struct {
+// MockAdminReplicatedOptions is a mock of AdminReplicatedOptions interface
+type MockAdminReplicatedOptions struct {
 	ctrl     *gomock.Controller
-	recorder *MockAdminMultiClusterOptionsMockRecorder
+	recorder *MockAdminReplicatedOptionsMockRecorder
 }
 
-// MockAdminMultiClusterOptionsMockRecorder is the mock recorder for MockAdminMultiClusterOptions
-type MockAdminMultiClusterOptionsMockRecorder struct {
-	mock *MockAdminMultiClusterOptions
+// MockAdminReplicatedOptionsMockRecorder is the mock recorder for MockAdminReplicatedOptions
+type MockAdminReplicatedOptionsMockRecorder struct {
+	mock *MockAdminReplicatedOptions
 }
 
-// NewMockAdminMultiClusterOptions creates a new mock instance
-func NewMockAdminMultiClusterOptions(ctrl *gomock.Controller) *MockAdminMultiClusterOptions {
-	mock := &MockAdminMultiClusterOptions{ctrl: ctrl}
-	mock.recorder = &MockAdminMultiClusterOptionsMockRecorder{mock}
+// NewMockAdminReplicatedOptions creates a new mock instance
+func NewMockAdminReplicatedOptions(ctrl *gomock.Controller) *MockAdminReplicatedOptions {
+	mock := &MockAdminReplicatedOptions{ctrl: ctrl}
+	mock.recorder = &MockAdminReplicatedOptionsMockRecorder{mock}
 	return mock
 }
 
 // EXPECT returns an object that allows the caller to indicate expected use
-func (m *MockAdminMultiClusterOptions) EXPECT() *MockAdminMultiClusterOptionsMockRecorder {
+func (m *MockAdminReplicatedOptions) EXPECT() *MockAdminReplicatedOptionsMockRecorder {
 	return m.recorder
 }
 
 // SetAsyncTopologyInitializers mocks base method
-func (m *MockAdminMultiClusterOptions) SetAsyncTopologyInitializers(value []topology.Initializer) MultiClusterOptions {
+func (m *MockAdminReplicatedOptions) SetAsyncTopologyInitializers(value []topology.Initializer) ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetAsyncTopologyInitializers", value)
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
 // SetAsyncTopologyInitializers indicates an expected call of SetAsyncTopologyInitializers
-func (mr *MockAdminMultiClusterOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
+func (mr *MockAdminReplicatedOptionsMockRecorder) SetAsyncTopologyInitializers(value interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockAdminMultiClusterOptions)(nil).SetAsyncTopologyInitializers), value)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAsyncTopologyInitializers", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).SetAsyncTopologyInitializers), value)
 }
 
 // AsyncTopologyInitializers mocks base method
-func (m *MockAdminMultiClusterOptions) AsyncTopologyInitializers() []topology.Initializer {
+func (m *MockAdminReplicatedOptions) AsyncTopologyInitializers() []topology.Initializer {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AsyncTopologyInitializers")
 	ret0, _ := ret[0].([]topology.Initializer)
@@ -3919,13 +3919,13 @@ func (m *MockAdminMultiClusterOptions) AsyncTopologyInitializers() []topology.In
 }
 
 // AsyncTopologyInitializers indicates an expected call of AsyncTopologyInitializers
-func (mr *MockAdminMultiClusterOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
+func (mr *MockAdminReplicatedOptionsMockRecorder) AsyncTopologyInitializers() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockAdminMultiClusterOptions)(nil).AsyncTopologyInitializers))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncTopologyInitializers", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).AsyncTopologyInitializers))
 }
 
 // OptionsForAsyncClusters mocks base method
-func (m *MockAdminMultiClusterOptions) OptionsForAsyncClusters() []Options {
+func (m *MockAdminReplicatedOptions) OptionsForAsyncClusters() []Options {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OptionsForAsyncClusters")
 	ret0, _ := ret[0].([]Options)
@@ -3933,27 +3933,27 @@ func (m *MockAdminMultiClusterOptions) OptionsForAsyncClusters() []Options {
 }
 
 // OptionsForAsyncClusters indicates an expected call of OptionsForAsyncClusters
-func (mr *MockAdminMultiClusterOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
+func (mr *MockAdminReplicatedOptionsMockRecorder) OptionsForAsyncClusters() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockAdminMultiClusterOptions)(nil).OptionsForAsyncClusters))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OptionsForAsyncClusters", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).OptionsForAsyncClusters))
 }
 
 // SetOptions mocks base method
-func (m *MockAdminMultiClusterOptions) SetOptions(arg0 Options) MultiClusterOptions {
+func (m *MockAdminReplicatedOptions) SetOptions(arg0 Options) ReplicatedOptions {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "SetOptions", arg0)
-	ret0, _ := ret[0].(MultiClusterOptions)
+	ret0, _ := ret[0].(ReplicatedOptions)
 	return ret0
 }
 
 // SetOptions indicates an expected call of SetOptions
-func (mr *MockAdminMultiClusterOptionsMockRecorder) SetOptions(arg0 interface{}) *gomock.Call {
+func (mr *MockAdminReplicatedOptionsMockRecorder) SetOptions(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetOptions", reflect.TypeOf((*MockAdminMultiClusterOptions)(nil).SetOptions), arg0)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetOptions", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).SetOptions), arg0)
 }
 
 // Options mocks base method
-func (m *MockAdminMultiClusterOptions) Options() Options {
+func (m *MockAdminReplicatedOptions) Options() Options {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Options")
 	ret0, _ := ret[0].(Options)
@@ -3961,9 +3961,9 @@ func (m *MockAdminMultiClusterOptions) Options() Options {
 }
 
 // Options indicates an expected call of Options
-func (mr *MockAdminMultiClusterOptionsMockRecorder) Options() *gomock.Call {
+func (mr *MockAdminReplicatedOptionsMockRecorder) Options() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Options", reflect.TypeOf((*MockAdminMultiClusterOptions)(nil).Options))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Options", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).Options))
 }
 
 // MockclientSession is a mock of clientSession interface

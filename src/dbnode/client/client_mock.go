@@ -3966,6 +3966,34 @@ func (mr *MockAdminReplicatedOptionsMockRecorder) Options() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Options", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).Options))
 }
 
+// SetAdminOptions mocks base method
+func (m *MockAdminReplicatedOptions) SetAdminOptions(arg0 AdminOptions) AdminReplicatedOptions {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetAdminOptions", arg0)
+	ret0, _ := ret[0].(AdminReplicatedOptions)
+	return ret0
+}
+
+// SetAdminOptions indicates an expected call of SetAdminOptions
+func (mr *MockAdminReplicatedOptionsMockRecorder) SetAdminOptions(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetAdminOptions", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).SetAdminOptions), arg0)
+}
+
+// AdminOptions mocks base method
+func (m *MockAdminReplicatedOptions) AdminOptions() AdminOptions {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AdminOptions")
+	ret0, _ := ret[0].(AdminOptions)
+	return ret0
+}
+
+// AdminOptions indicates an expected call of AdminOptions
+func (mr *MockAdminReplicatedOptionsMockRecorder) AdminOptions() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AdminOptions", reflect.TypeOf((*MockAdminReplicatedOptions)(nil).AdminOptions))
+}
+
 // MockclientSession is a mock of clientSession interface
 type MockclientSession struct {
 	ctrl     *gomock.Controller

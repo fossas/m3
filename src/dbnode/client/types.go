@@ -569,6 +569,12 @@ type CommonReplicatedOptions interface {
 	// AsyncTopologyInitializers returns the TopologyInitializers
 	AsyncTopologyInitializers() []topology.Initializer
 
+	// SetOptions sets the client-level options for each cluster represented in this ReplicationOptions.
+	SetOptions(Options) ReplicatedOptions
+
+	// Options returns the client-level options.
+	Options() Options
+
 	// OptionsForAsyncClusters returns a slice of Options, where each is the set of client
 	// for a given async client.
 	OptionsForAsyncClusters() []Options
@@ -577,19 +583,11 @@ type CommonReplicatedOptions interface {
 // ReplicatedOptions is a set of multi cluster client options
 type ReplicatedOptions interface {
 	CommonReplicatedOptions
-
-	SetOptions(Options) ReplicatedOptions
-
-	Options() Options
 }
 
 // AdminReplicatedOptions is a set of administration multi cluster client options
 type AdminReplicatedOptions interface {
 	CommonReplicatedOptions
-
-	SetOptions(Options) ReplicatedOptions
-
-	Options() Options
 
 	SetAdminOptions(AdminOptions) AdminReplicatedOptions
 
